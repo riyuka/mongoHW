@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<div class="container header-wrapper">
+			<% include ../partials/header %>
+		</div>
+	</header>
+	
+
+	<main id = "homepage">
+        <div class = "homeDivs">
+            <h3>Click for News</h3>
+            <form method="POST" action="/newsjson">
+             <button id="submit" class="btn btn-primary">Submit</button>               
+             </form>
+        </div>
+        <div id="news-display"></div>
+    
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+
+	<script type="text/javascript">
+            $.ajax({
+                url: '/content/news',
+                method: 'GET'
+            }).then(function(data){
+                var ob, t, link, news,btnA,btnS, newswrapper;
+                for (var i=0; i<data.length; i++){
+                    ob = data[i];
+                    t = $("<h3 class='news-title'>");
+                    t.text(ob.title);
+                    link = $("<a class='link'>link</a>");
+                    link.attr("href", ob.link);
+                    news = $("<div class='news-content'>");
+                    news.text(ob.content);
+                    btnA = $("<button class='add-comment'>Add comment</button>");
+                    btnA.attr("data-name", ob.title);
+                    btnS = $("<button class='see-comment'>See comment</button>");
+                    btnS.attr("data-name", ob.title);
+                    newswrapper = $("<div class='news'>");
+                    newswrapper.append(t, news, link, btnA, btnS);
+                    $('#news-display').append(newswrapper);
+                }
+                
+                $('.add-comment').on('click', function(){
+                    var ClickOne = $(this);
+                    var detail = ClickOne.attr("data-name");
+                    //console.log(detail);
+                    window.location = "/content/" + detail;
+                });
+
+                $('.see-comment').on('click', function(){
+                    var ClickOne = $(this);
+                    var detail = ClickOne.attr("data-name");
+                    //console.log(detail);
+                    window.location = "/news/comment/" + detail;
+                });
+              
+            });
+		
+	</script>
+</body>
+</html>

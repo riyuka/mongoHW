@@ -1,0 +1,288 @@
+html {
+    height: 100%;
+    min-height: 100%;
+  }
+
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: #eff3f0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.6em;
+    color: #209e7b;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    color: #209e7b;
+}
+
+p {
+    line-height: 20px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px #f1d1b9 solid;
+}
+/* .accountLogInDiv {
+    margin-top: 4em;
+} */
+main {
+    background-color: white;
+    margin: 100px 0;
+    padding: 2em; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    background-color: white;
+    border-top: 2px #f1d1b9 solid;
+}
+
+/* nav - start */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.accountLogInDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navLinksDiv {
+    margin-left: 1em;
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbar-brand {
+    width: 33%;
+    font-family: 'Berkshire Swash', cursive;
+    color: #209e7b;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #209e7b;
+}
+
+.nav-link {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: #9e98a4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #f1d1b9;
+}
+.btn-outline-success {
+    color: #209e7b;
+    background-color: white;
+    border-color: #209e7b; 
+}
+.btn-outline-success:hover, 
+.btn-outline-success:focus, 
+.btn-outline-success:active, 
+.btn-outline-success.active, .open>.dropdown-toggle.btn-outline-success {
+    color: white !important;
+    background-color: #209e7b !important;
+    border-color: white !important;
+    box-shadow: none !important; 
+}
+
+.loginLinks {
+    display: flex;
+    align-items: center;
+}
+
+.loginLinks * {
+    margin-left: 16px;
+}
+
+/* nav - end */
+
+.homeDivs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeLeft {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5em;
+}
+
+.homeRight {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    background-color: #fde9de;
+    padding: .5em;
+}
+
+#newsEntry {
+    margin-top: 10px;
+}
+
+.blog {
+    border: .5px #f1d1b9 solid;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+/* .blog_content {
+    padding: .5px;
+} */
+
+/* animal cards - start */
+
+.animalCards, #petsPreview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.card  {
+    width: 320px;
+    height: 415px;
+    flex: 0 1 24%;
+    margin-top: 15px;
+}
+
+.homeAnimalCard {
+    width: 100px;
+    height: auto;;
+    flex: 0 1 45%;
+    margin-top: 15px;
+}
+
+.homeAnimalCard  .card-body {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.card-img-top {
+	display: block;
+	border: 0;
+	width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+/* animal cards - end */
+
+.animalMenu {
+    margin-top: 20px;
+}
+
+
+/* About page */
+
+#about img {
+    float: right;
+    width: 400px;
+    margin: 0 0 48px 24px;
+}
+
+#about p {
+    margin-bottom: 24px;
+}
+
+/* Contact page */
+#contact ul {
+    margin-bottom: 24px;
+    line-height: 20px;
+}
+
+/* Details page */
+#pet-details:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.detail-label {
+    color: #209e7b;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#pet-details p {
+    margin-bottom: 8px;
+}
+
+#pet-details img {
+    float: left;
+    margin-right: 32px;
+}
+
+#apply_info {
+    width: 400px;
+    height:200px;
+}
+
+/* My account page */
+label {
+    display: block;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    margin: 8px 0 24px;
+    width: 400px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"] {
+    padding: 8px;
+}
+
+.btn-primary{
+    display: block;
+    background-color: #209e7b;
+    border: none;
+}
+
+
+#login > div {
+    margin-bottom: 24px;
+}
