@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+    min-height: 100%;
+  }
+
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: #eff3f0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+h3 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    color: #209e7b;
+}
+
+p {
+    line-height: 20px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px #f1d1b9 solid;
+}
+
+.navbar-brand {
+    width: 33%;
+    font-family: 'Berkshire Swash', cursive;
+    color: #209e7b;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.btn-primary {
+    display: block;
+    background-color: #209e7b;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #12634c;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #0e4d3b;
+}
+
+/* .accountLogInDiv {
+    margin-top: 4em;
+} */
+main {
+    background-color: white;
+    margin: 100px 0;
+    padding: 2em; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    background-color: white;
+    border-top: 2px #f1d1b9 solid;
+}
+
+.news {
+    margin-bottom: 40px;
+}
+
+.news:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.news-content {
+    margin-bottom: 10px;
+}
+
+.title-bar {
+    margin-bottom: 20px;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.btn-light {
+    float: right;
+    margin-left: 20px;
+}
+
+.link {
+    color: #209e7b;
+    line-height: 38px;
+}
+
+.link:hover {
+    color: #209e7b;
+}
+
+.comment-form label, .comment-form input, .comment-form texarea {
+    display: block;
+    margin: 10px 0;
+}
+
+.comment-form label {
+    margin-top: 20px;
+}
+
+.comment-form button {
+    margin-top: 20px;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 480px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+.comment-form textarea {
+    height: 300px;
+}
+
+.comment {
+    margin-bottom: 40px;
+}
+
+.comment p {
+    margin-bottom: 20px;
+}
+
+.comment .btn-secondary {
+    font-size: 13px;
+}

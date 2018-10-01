@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<div class="container header-wrapper">
+			<% include ../partials/header %>
+		</div>
+	</header>
+	
+	<main id="news-details">
+	<a href="/"><button class="btn btn-primary">Back</button></a><br><br>
+	
+	  <h3><span class="detail-label"></span> <%= title %> </h3>
+	  <div><span class="detail-label"></span> <%= time %> </div>
+	  <p><span class="detail-label"></span> <%= content %> </p>
+	  <p><span class="detail-label"></span><a class='link' href='<%= link %>'>View news article <i class='fas fa-external-link-square-alt'></i></a></p>
+	 
+	<div class="comment-display">
+	</div>
+
+	<form name="myForm" onsubmit="return validateForm()" action="/leavecomment/<%= title %>"  method="POST" class="comment-form">
+	<label for="name">Your name: </label><input type="text" name="name">
+	<label for="comment" >Your comment: </label><textarea type="text" name="comment"></textarea>
+	<button class="add-comment btn btn-primary">Submit</button>
+	</form>
+	
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+    <script>
+  	function validateForm() {
+	  var name = document.forms["myForm"]["name"].value;
+	  var comment = document.forms["myForm"]["comment"].value;
+	  if (name == "" ) {
+		  alert("All field must be filled out");
+		  return false;
+	  }
+	  if (comment == "" ) {
+		  alert("All field must be filled out");
+		  return false;
+	  }
+	  return true;
+	  }
+  
+  </script>
+
+   </main>
+	
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

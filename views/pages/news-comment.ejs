@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<div class="container header-wrapper">
+			<% include ../partials/header %>
+		</div>
+	</header>
+	
+	<main id="news-details">
+	<a href="/"><button class="btn btn-primary">Back</button></a><br><br>
+	
+      <p><span class="detail-label"></span>
+      
+      <ul>
+      <% results.forEach(function(data){%>
+              <li class="comment"><p><%=data.comment %></p><button data-name="<%=data.title %>" data-content="<%=data.comment %>" class="del btn btn-secondary"><i class="far fa-trash-alt"></i>Delete Comment</button></li>
+          <% }) %>
+      </ul>
+      </p>
+
+	<div class="comment-display">
+	</div>
+
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+    <script>
+  
+	  $(".del").on("click", function(){
+          var delthis = $(this).attr("data-content");
+          var page = $(this).attr("data-name");
+           
+          $.ajax("/deletecomment/" + delthis, {
+                type: "GET"
+                }).then(function() {})       
+          window.location = '/news/comment/' + page;
+      })
+  </script>
+
+   </main>
+	
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
