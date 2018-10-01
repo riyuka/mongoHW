@@ -101,6 +101,7 @@ request("https://www.infoq.com/development/articles/", function(error, response,
     db.development.find({title: req.params.title},function (error, results, fields) {
       if (error) throw error;
         //console.log(results[0]);
+        
         res.render('../views/pages/news', {
           title: results[0].title,
           time: results[0].time,
